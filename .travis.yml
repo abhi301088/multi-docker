@@ -2,11 +2,11 @@ sudo: required
 service:
   - docker
 
-#before_install:
-#  - docker build -t abhishek/react-test -f ./client/Dockerfile.dev ./client
+before_install:
+  - docker build -t abhishek/react-test -f ./client/Dockerfile.dev ./client
 
-#script:
-#  - docker run abhishek/react-test npm test -- --coverage
+script:
+  - docker run -e CI=true USERNAME/react-test npm test
 
 after_success:
   - docker build -t abhishek/multi-client ./client
