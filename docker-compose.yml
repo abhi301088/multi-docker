@@ -32,7 +32,7 @@ services:
       - PGUSER=postgres
       - PGHOST=postgres
       - PGDATABASE=postgres
-      - PGPASSWORD=POSTGRES_PASSWORD
+      - PGPASSWORD=postgress_password
       - PGPORT=5432
   client:
     environment:
